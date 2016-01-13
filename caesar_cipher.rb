@@ -30,17 +30,25 @@ end
 
 
 puts "Please type is your message:"
-message = gets.chomp
-puts
 
+# clean up ------
+new_line = gets.chomp
+message = ""
+while new_line != "end" do
+  message = message + "\n" + new_line
+  new_line = gets.chomp
+end
+# -------
+
+puts
 puts "What is your shift factor?"
 shift_factor = gets.chomp.to_i
 puts
 
+# Uncomment to see detailed message input.
+# puts "Here is your message:"
+# p message
+
 puts "Here is your ciphered message:"
 puts caesar_cipher(message, shift_factor)
 puts
-
-def new_method
-  puts "not master"
-end
