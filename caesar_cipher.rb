@@ -30,7 +30,7 @@ def caesar_cipher(message, shift_factor)
 end
 
 
-puts "Please type your message:"
+puts "Please type your message: (type 'end' to end your message)"
 
 new_line = gets.chomp
 message = ""
@@ -40,7 +40,7 @@ while new_line != "end" do
 end
 
 puts
-puts "What is your shift factor?"
+puts "What is your shift factor? (positive numbers only)"
 shift_factor = gets.chomp.to_i
 puts
 
