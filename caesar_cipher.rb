@@ -1,3 +1,4 @@
+puts
 puts <<-eos
   Welcome to the Caesar Cipher program. For information on the Caeser Cipher,
   you can visit https://en.wikipedia.org/wiki/Caesar_cipher. Follow the prompts
@@ -29,16 +30,14 @@ def caesar_cipher(message, shift_factor)
 end
 
 
-puts "Please type is your message:"
+puts "Please type your message:"
 
-# clean up ------
 new_line = gets.chomp
 message = ""
 while new_line != "end" do
   message = message + "\n" + new_line
   new_line = gets.chomp
 end
-# -------
 
 puts
 puts "What is your shift factor?"
