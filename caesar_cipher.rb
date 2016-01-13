@@ -1,4 +1,3 @@
-puts
 puts <<-eos
   Welcome to the Caesar Cipher program. For information on the Caeser Cipher,
   you can visit https://en.wikipedia.org/wiki/Caesar_cipher. Follow the prompts
@@ -41,3 +40,7 @@ puts
 puts "Here is your ciphered message:"
 puts caesar_cipher(message, shift_factor)
 puts
+
+def new_method
+  puts "not master"
+end
