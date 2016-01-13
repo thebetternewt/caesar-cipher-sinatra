@@ -1,9 +1,12 @@
+puts
 puts <<-eos
   Welcome to the Caesar Cipher program. For information on the Caeser Cipher,
   you can visit https://en.wikipedia.org/wiki/Caesar_cipher. Follow the prompts
-  to enter your message and shift_factor, and the program will return your
+  to enter your message and shift factor, and the program will return your
   ciphered message. Enjoy!
 eos
+puts
+puts
 
 def caesar_cipher(message, shift_factor)
   message = message.split('')
@@ -29,9 +32,12 @@ end
 
 puts "Please type is your message:"
 message = gets.chomp
+puts
 
 puts "What is your shift factor?"
 shift_factor = gets.chomp.to_i
+puts
 
 puts "Here is your ciphered message:"
 puts caesar_cipher(message, shift_factor)
+puts
