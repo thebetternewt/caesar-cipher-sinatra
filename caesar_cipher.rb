@@ -42,6 +42,10 @@ end
 puts
 puts "What is your shift factor? (positive numbers only)"
 shift_factor = gets.chomp.to_i
+while shift_factor < 1
+  puts "Please enter a whole number greater than '0':"
+  shift_factor = gets.chomp.to_i
+end
 puts
 
 # Uncomment to see detailed message input.
