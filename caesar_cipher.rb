@@ -1,3 +1,5 @@
+require './lib/cipher.rb'
+
 puts
 puts <<-eos
   Welcome to the Caesar Cipher program. For information on the Caeser Cipher,
@@ -7,28 +9,6 @@ puts <<-eos
 eos
 puts
 puts
-
-def caesar_cipher(message, shift_factor)
-  message = message.split('')
-  message.each_with_index do |letter, index|
-    if letter =~ /[a-z]/i
-      shift_factor.times do
-        if letter =~/[z]/
-          letter = 'a'
-          message[index] = letter
-        elsif letter =~ /[Z]/
-          letter = 'A'
-          message[index] = letter
-        else
-          letter.next!
-        end
-      end
-    end
-  end
-
-  return message.join
-end
-
 
 puts "Please type your message: (type 'end' to end your message)"
 
@@ -53,5 +33,5 @@ puts
 # p message
 
 puts "Here is your ciphered message:"
-puts caesar_cipher(message, shift_factor)
+puts Cipher.caesar_cipher(message, shift_factor)
 puts
