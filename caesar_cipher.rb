@@ -7,7 +7,6 @@ get '/' do
   if message && shift_factor
     ciphered_message = Cipher.caesar_cipher(message, shift_factor)
   end
-  puts ciphered_message
   erb :index, locals: { message: message,
                         shift_factor: shift_factor,
                         ciphered_message: ciphered_message }
