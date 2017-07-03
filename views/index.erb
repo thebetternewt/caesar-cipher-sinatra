@@ -22,7 +22,7 @@
       <input type="submit" value="Cipher!">
     </form>
 
-    <% if ciphered_message && ciphered_message.empty? %>
+    <% if ciphered_message && !ciphered_message.empty? %>
       <h3>Your ciphered message:</h3>
       <p>
         <%= ciphered_message %>
