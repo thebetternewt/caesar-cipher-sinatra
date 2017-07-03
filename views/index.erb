@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sinatra Caesar Cipher</title>
+
+  </head>
+  <body>
+    <h1>Caesar Cipher</h1>
+    <p>
+      Welcome to the Caesar Cipher program. For information on the Caeser Cipher,<br>
+      you can visit https://en.wikipedia.org/wiki/Caesar_cipher. Follow the prompts<br>
+      to enter your message and shift factor, and the program will return your<br>
+      ciphered message. Enjoy!
+    </p>
+
+    <h3>Type your message below:</h3>
+    <form>
+      <textarea rows="6" cols="50" name="message"></textarea><br>
+      <label for="number">Shift Factor:</label>
+      <input type="number" name="shift-factor" value="1" min="1">
+      <input type="submit" value="Cipher!">
+    </form>
+
+    <% unless ciphered_message.empty? %>
+      <h3>Your ciphered message:</h3>
+      <p>
+        <%= ciphered_message %>
+      </p>
+    <% end %>
+
+  </body>
+</html>
